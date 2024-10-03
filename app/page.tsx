@@ -1,9 +1,10 @@
-import "@/lib/utils/env";
+import '@/lib/utils/env';
+import Banner from '@/ui/components/banner';
 
 const Home: React.FC = () => {
   return (
-    <section className="w-full pt-1">
-      <div className="w-full flex px-4 justify-center items-center"></div>
+    <section className='w-full pt-1'>
+      <Banner />
     </section>
   );
 };
