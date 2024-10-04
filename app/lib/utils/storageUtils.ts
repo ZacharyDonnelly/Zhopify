@@ -18,7 +18,7 @@ export function getFromLocalStorage(key: string): string | null {
 }
 
 /**
- * This TypeScript function retrieves a value from the session storage based on a
+ * The function retrieves a value from the session storage based on a
  * given key.
  * @param {string} key - The `key` parameter in the `getFromSessionStorage`
  * function is a string that represents the key under which the value is stored in
