@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/db/prisma";
+import FormSubmitButton from "@/ui/components/FormSubmitButton";
 import { redirect } from "next/navigation";
 import { Metadata } from "next/types";
 
@@ -32,7 +33,7 @@ async function addProduct(formData: FormData) {
 
 const AddProductPage: React.FC = () => {
   return (
-    <div className="w-full px-16 flex flex-col justify-center items-center">
+    <div className="w-full px-16 flex flex-col justify-center items-center mb-10">
       <h1 className="mb-3 text-lg font-bold underline">Add Product</h1>
       <form action={addProduct} className="w-[500px] flex flex-col">
         <input
@@ -61,12 +62,9 @@ const AddProductPage: React.FC = () => {
           type="number"
           className="input-bordered input mb-3 w-full border-2 border-black rounded-md pl-2"
         />
-        <button
-          type="submit"
-          className="self-center border-2 p-3 border-black bg-slate-200 rounded-md font-semibold cursor-pointer"
-        >
+        <FormSubmitButton className="btn btn-primary">
           Add Product
-        </button>
+        </FormSubmitButton>
       </form>
     </div>
   );

@@ -4,11 +4,13 @@ const Header: React.FC = () => {
       <div className="w-full h-full flex items-center">
         <div className="w-[726px] pl-4">
           <ul className="leading-10 flex gap-x-6 text-lg items-center whitespace-nowrap overflow-visible">
-            <li className="cursor-pointer hover:text-[#ff4f0f]">Home</li>
+            <li className="cursor-pointer hover:text-[#ff4f0f]">
+              <a href="/">Home</a>
+            </li>
             <li className="cursor-pointer hover:text-[#ff4f0f]">Shop</li>
             <li className="cursor-pointer hover:text-[#ff4f0f]">Collections</li>
             <li className="cursor-pointer hover:text-[#ff4f0f]">
-              Add Products
+              <a href="/add-product">Add Product</a>
             </li>
           </ul>
         </div>
