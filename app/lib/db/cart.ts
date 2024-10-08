@@ -11,7 +11,7 @@ export type ShoppingCart = CartWithProducts & {
   subtotal: number;
 };
 
-export async function getCart(): Promise<ShoppingCart | null> {
+export const getCart = async (): Promise<ShoppingCart | null> => {
   const localCartId = cookies().get("localCartId")?.value;
   const cart = localCartId
     ? await prisma.cart.findUnique({
@@ -32,9 +32,9 @@ export async function getCart(): Promise<ShoppingCart | null> {
       0,
     ),
   };
-}
+};
 
-export async function createCart(): Promise<ShoppingCart> {
+export const createCart = async (): Promise<ShoppingCart> => {
   const newCart = await prisma.cart.create({
     data: {},
   });
@@ -48,4 +48,4 @@ export async function createCart(): Promise<ShoppingCart> {
     size: 0,
     subtotal: 0,
   };
-}
+};
