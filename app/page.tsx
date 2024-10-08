@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/db/prisma";
 import "@/lib/utils/env";
 import Banner from "@/ui/components/banner";
-import ProductCard from "@/ui/components/products/productCard";
+import ProductCard from "@/products/[id]/productCard";
 
 const PRODUCT_CARD_MOCK_DATA = [
   {

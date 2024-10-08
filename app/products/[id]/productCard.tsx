@@ -33,12 +33,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <PriceTag price={product.price} className="-ml-2 font-medium" />
         <p className="text-xs">Free Shipping</p>
       </div>
-      <Link
-        href={"/products/" + product.id}
+      <button
+        type="button"
         className="w-full flex justify-center items-center h-9 mt-2 bg-[#ff4f0f] border-[#ff4f0f] text-white font-semibold rounded-md cursor-pointer"
       >
         Add to Cart
-      </Link>
+      </button>
     </Link>
   );
 };
