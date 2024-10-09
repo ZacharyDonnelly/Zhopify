@@ -1,4 +1,9 @@
-const Header: React.FC = () => {
+import { getCart } from "@/lib/db/cart";
+import CartButton from "@/ui/components/layout/CartButton";
+
+const Header: React.FC = async () => {
+  const cart = await getCart();
+
   return (
     <nav className="min-h-[163px] h-[163px] pt-3 pb-2 px-20">
       <div className="w-full h-full flex items-center">
@@ -26,8 +31,11 @@ const Header: React.FC = () => {
         </div>
         <div className="w-[724px] pr-4">
           <ul className="leading-10 flex justify-end gap-x-6 text-lg items-center whitespace-nowrap">
-            <li className="cursor-pointer hover:text-[#ff4f0f]">Cart</li>
             <li className="cursor-pointer hover:text-[#ff4f0f]">Log In</li>
+            <li className="cursor-pointer flex items-center">
+              {/* <p className="text-sm">Cart</p> */}
+              <CartButton cart={cart} />
+            </li>
           </ul>
         </div>
       </div>

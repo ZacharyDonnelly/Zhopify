@@ -1,3 +1,5 @@
+import { incrementProductQuantity } from "@/products/[id]/actions";
+import AddToCartButton from "@/products/[id]/AddToCartButton";
 import NextImage from "@/ui/components/nextImage";
 import PriceTag from "@/ui/components/priceTag";
 import { Product } from "@prisma/client";
@@ -27,18 +29,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <h3 className="font-semibold text-lg">
           {product.name}
           {isNew && (
-            <div className="badge badge-secondary ml-2 -mt-4 mb-2">NEW</div>
+            <div className="badge bg-[#ff4f0f] font-semibold ml-2 align-middle mb-1">
+              NEW
+            </div>
           )}
         </h3>
         <PriceTag price={product.price} className="-ml-2 font-medium" />
         <p className="text-xs">Free Shipping</p>
       </div>
-      <button
-        type="button"
-        className="w-full flex justify-center items-center h-9 mt-2 bg-[#ff4f0f] border-[#ff4f0f] text-white font-semibold rounded-md cursor-pointer"
-      >
-        Add to Cart
-      </button>
+      <AddToCartButton
+        className="mt-3 bg-[##ff4f0f]"
+        productId={product.id}
+        incrementProductQuantity={incrementProductQuantity}
+      />
     </Link>
   );
 };

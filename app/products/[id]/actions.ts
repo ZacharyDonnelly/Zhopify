@@ -1,11 +1,13 @@
 "use server";
 
-import { createCart, getCart } from "@/lib/db/cart";
+import { createCart, getCart, ShoppingCart } from "@/lib/db/cart";
 import { prisma } from "@/lib/db/prisma";
 import { revalidatePath } from "next/cache";
 
-export const incrementProductQuantity = async (productId: string) => {
-  const cart = (await getCart()) ?? (await createCart());
+export const incrementProductQuantity = async (
+  productId: string,
+): Promise<void> => {
+  const cart: ShoppingCart = (await getCart()) ?? (await createCart());
 
   const articleInCart = cart.items.find((item) => item.productId === productId);
 

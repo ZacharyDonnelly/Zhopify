@@ -5,19 +5,21 @@ import { useState, useTransition } from "react";
 interface AddToCartButtonProps {
   productId: string;
   incrementProductQuantity: (productId: string) => Promise<void>;
+  className?: string;
 }
 
 const AddToCartButton: React.FC<AddToCartButtonProps> = ({
   productId,
   incrementProductQuantity,
+  className,
 }: AddToCartButtonProps) => {
   const [isPending, startTransition] = useTransition();
   const [success, setSuccess] = useState(false);
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={`flex items-center gap-2 ${className}`}>
       <button
-        className="btn-primary btn"
+        className="bg-[#ff4f0f] hover:bg-[#ff4f44] text-white font-semibold btn"
         onClick={() => {
           setSuccess(false);
           startTransition(async () => {
