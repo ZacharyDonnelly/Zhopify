@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main className="min-w-[300px]">{children}</main>
-        <Footer />
+      <body className={`${inter.className} flex flex-col`}>
+        <Header className="flex-shrink-0" />
+        <main className="min-w-[300px] flex-1">{children}</main>
+        <Footer className="flex-shrink-0" />
       </body>
     </html>
   );
