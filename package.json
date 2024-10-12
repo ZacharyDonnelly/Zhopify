@@ -1,7 +1,27 @@
 {
-  "name": "ecommerce_platform",
+  "name": "zhopify",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "Next.js",
+    "Next 14",
+    "Next-Auth",
+    "React",
+    "React server components",
+    "React client components",
+    "React hooks",
+    "TypeScript",
+    "Jest",
+    "SASS",
+    "Prisma",
+    "Cypress",
+    "mongodb",
+    "Google",
+    "Github",
+    "JavaScript",
+    "mongo",
+    "ecommerce"
+  ],
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -9,8 +29,12 @@
     "format:check": "prettier -c .",
     "lint": "next lint",
     "lint:fix": "eslint ./app --fix && yarn format",
-    "lint:strict": "eslint --max-warnings=0 ./app",
-    "prepare": "husky install",
+    "lint:all": "npm-run-all --parallel lint:strict lint:format",
+    "lint:format": "prettier --write 'app/*.{js,jsx,ts,tsx,css}'",
+    "lint:md": "markdownlint-cli2 **/*.{md,mdx}",
+    "lint:ts": "eslint --ext .ts,.tsx,.js, .",
+    "lint:ts:fix": "eslint --ext .ts,.tsx,.js,.jsx --fix .",
+    "lint:strict": "eslint --max-warnings=0 --ext .ts,.tsx --fix ./app",
     "start": "next start",
     "typecheck": "tsc --noEmit --incremental false"
   },
@@ -43,11 +67,27 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "next-auth": "^4.24.8",
+    "npm-run-all2": "^6.2.3",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "prisma": "^5.20.0",
+    "scriptlint": "^3.0.0",
     "tailwindcss": "^3.4.13",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:all && yarn typecheck"
+    }
+  },
+  "scriptlint": {
+    "strict": true,
+    "rules": {
+      "uses-allowed-namespace": false
+    }
   }
 }

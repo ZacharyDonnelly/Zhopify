@@ -1,40 +1,7 @@
 import { prisma } from "@/lib/db/prisma";
 import "@/lib/utils/env";
-import Banner from "@/ui/components/banner";
 import ProductCard from "@/products/[id]/productCard";
-
-const PRODUCT_CARD_MOCK_DATA = [
-  {
-    id: 1,
-    title: "Scooter",
-    price: "$100",
-  },
-  {
-    id: 2,
-    title: "Tent",
-    price: "$200",
-  },
-  {
-    id: 3,
-    title: "Kayak",
-    price: "$300",
-  },
-  {
-    id: 4,
-    title: "Beanie",
-    price: "$400",
-  },
-  {
-    id: 5,
-    title: "Wallet",
-    price: "$500",
-  },
-  {
-    id: 6,
-    title: "Bug Spray",
-    price: "$600",
-  },
-];
+import Banner from "@/ui/components/banner";
 
 const Home: React.FC = async () => {
   const products = await prisma.product.findMany({

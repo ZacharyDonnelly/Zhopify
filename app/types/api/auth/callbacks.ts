@@ -7,7 +7,7 @@ type SessionProps = {
   session: Session;
   token: JWT;
   trigger: string;
-  newSession?: any;
+  newSession?: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 };
 type JWTProps = { token: JWT; user: User | AdapterUser };
 

@@ -62,8 +62,8 @@ export async function POST(req: NextRequest | Request): Promise<NextResponse> {
 }
 
 export async function GET(
-  req: NextRequest | Request,
-  res: NextResponse,
+  req: NextRequest | Request, // eslint-disable-line
+  res: NextResponse, // eslint-disable-line
 ): Promise<NextResponse> {
   return NextResponse.json({ message: "GET request" }, { status: 200 });
 }

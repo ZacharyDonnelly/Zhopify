@@ -16,7 +16,7 @@ import { AllowedHTTPMethods } from "@/types/api/httpMethods";
 const fetchHandler = async (
   url: string,
   method: AllowedHTTPMethods,
-  data: any,
+  data: any, // eslint-disable-line @typescript-eslint/no-explicit-any
 ): Promise<Response> => {
   try {
     const options: RequestInit = {
