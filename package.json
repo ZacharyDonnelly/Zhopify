@@ -85,6 +85,7 @@
       "pre-commit": "yarn lint:all && yarn typecheck"
     }
   },
+  "packageManager": "yarn@4.1.0",
   "scriptlint": {
     "strict": true,
     "rules": {
