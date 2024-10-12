@@ -42,9 +42,10 @@ const Header: React.FC<HeaderProps> = async ({ className }) => {
         </div>
         <div className="w-[724px] pr-4">
           <ul className="leading-10 flex justify-end gap-x-6 text-lg items-center whitespace-nowrap">
-            <li className="cursor-pointer hover:text-[#ff4f0f]">Log In</li>
+            <li className="cursor-pointer hover:text-[#ff4f0f]">
+              <Link href="/login">Log In</Link>
+            </li>
             <li className="cursor-pointer flex items-center">
-              {/* <p className="text-sm">Cart</p> */}
               <CartButton cart={cart} />
             </li>
           </ul>
