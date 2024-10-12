@@ -39,6 +39,14 @@ declare module "next-auth" {
     id_token?: string;
     session_state?: string;
   }
+
+  interface Profile {
+    id: string | number;
+    name: string;
+    email: string;
+    image: string;
+    email_verified: boolean;
+  }
 }
 
 declare module "next-auth/jwt" {
