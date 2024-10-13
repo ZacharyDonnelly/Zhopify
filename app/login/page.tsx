@@ -1,8 +1,8 @@
 "use client";
-import Button from "@/ui/components/base/Button";
-import Checkbox from "@/ui/components/base/Checkbox";
-import Input from "@/ui/components/base/Input";
-import NextImage from "@/ui/components/nextImage";
+import Button from "@/lib/ui/components/base/Button";
+import Checkbox from "@/lib/ui/components/base/Checkbox";
+import Input from "@/lib/ui/components/base/Input";
+import NextImage from "@/lib/ui/components/common/nextImage";
 import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

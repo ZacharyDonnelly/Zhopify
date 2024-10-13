@@ -1,7 +1,7 @@
+import NextImage from "@/lib/ui/components/common/nextImage";
+import PriceTag from "@/lib/ui/components/common/priceTag";
 import { incrementProductQuantity } from "@/products/[id]/actions";
 import AddToCartButton from "@/products/[id]/AddToCartButton";
-import NextImage from "@/ui/components/nextImage";
-import PriceTag from "@/ui/components/priceTag";
 import { Product } from "@prisma/client";
 import Link from "next/link";
 

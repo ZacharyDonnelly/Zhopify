@@ -1,5 +1,5 @@
-import CartButton from "@/components/layout/CartButton";
 import { getCart } from "@/lib/db/cart";
+import CartButton from "@/lib/ui/components/layout/CartButton";
 import Link from "next/link";
 
 interface HeaderProps {

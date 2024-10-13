@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db/prisma";
-import FormSubmitButton from "@/ui/components/FormSubmitButton";
+import FormSubmitButton from "@/lib/ui/components/FormSubmitButton";
 import { redirect } from "next/navigation";
 import { Metadata } from "next/types";
 

@@ -1,8 +1,8 @@
 import { prisma } from "@/lib/db/prisma";
+import NextImage from "@/lib/ui/components/common/nextImage";
+import PriceTag from "@/lib/ui/components/common/priceTag";
 import { incrementProductQuantity } from "@/products/[id]/actions";
 import AddToCartButton from "@/products/[id]/AddToCartButton";
-import NextImage from "@/ui/components/nextImage";
-import PriceTag from "@/ui/components/priceTag";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";

@@ -1,6 +1,6 @@
 "use client";
 
-import NextImage from "@/ui/components/nextImage";
+import NextImage from "@/lib/ui/components/common/nextImage";
 
 import { CartItemWithProduct } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/utils/format";

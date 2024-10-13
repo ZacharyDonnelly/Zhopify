@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/constants/config";
-import Footer from "@/ui/components/layout/footer";
-import Header from "@/ui/components/layout/header";
-import "@/ui/styles/global.css";
+import Footer from "@/lib/ui/components/layout/footer";
+import Header from "@/lib/ui/components/layout/header";
+import "@/lib/ui/styles/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AuthProvider } from "./providers/AuthProvider";

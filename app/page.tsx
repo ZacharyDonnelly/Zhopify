@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/db/prisma";
+import Banner from "@/lib/ui/components/banner";
 import "@/lib/utils/env";
 import ProductCard from "@/products/[id]/productCard";
-import Banner from "@/ui/components/banner";
 
 const Home: React.FC = async () => {
   const products = await prisma.product.findMany({
