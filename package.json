@@ -75,7 +75,7 @@
     "prisma": "^5.20.0",
     "scriptlint": "^3.0.0",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5"
+    "typescript": "^5.6.0"
   },
   "engines": {
     "node": ">=20"
