@@ -12,9 +12,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auth/core@npm:0.37.0":
-  version: 0.37.0
-  resolution: "@auth/core@npm:0.37.0"
+"@auth/core@npm:0.37.1":
+  version: 0.37.1
+  resolution: "@auth/core@npm:0.37.1"
   dependencies:
     "@panva/hkdf": "npm:^1.2.1"
     "@types/cookie": "npm:0.6.0"
@@ -34,18 +34,18 @@ __metadata:
       optional: true
     nodemailer:
       optional: true
-  checksum: 10/f877ef3b3bfd1d9d9e25658e5060c90d3b25d076ed89ae2ada45d2502143310342c96369766dae29629a767eaa6591949f57431842d154d9a7d39c8a1142b312
+  checksum: 10/ff99ede28c6c7221335f395ab6e639eefc09ef6d105f23de3ff3740e212da88bb68ab472b173ade0b9cc0b41f5a072bd3c7235c04181170cde5a98e01fc081b2
   languageName: node
   linkType: hard
 
 "@auth/prisma-adapter@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "@auth/prisma-adapter@npm:2.7.0"
+  version: 2.7.1
+  resolution: "@auth/prisma-adapter@npm:2.7.1"
   dependencies:
-    "@auth/core": "npm:0.37.0"
+    "@auth/core": "npm:0.37.1"
   peerDependencies:
     "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5"
-  checksum: 10/a57f4b82d3dcf4c4c11604152a088ebce40abde58fc3387c4e5657c516a596fd0c98df3b5340dbedbbacf26ab8e4147f6a04d2bec412ba18d00461896daa90b6
+  checksum: 10/6dac2be3d9f54cdf5fbc8c2c51b5d638e591985ecdbd07435fff0ebe3292fea08a1710aeaee61d156dabdf0a74115c1e70de4c01772af1873e8d91f279b3034e
   languageName: node
   linkType: hard
 
