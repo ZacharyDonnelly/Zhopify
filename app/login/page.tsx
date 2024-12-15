@@ -3,14 +3,13 @@ import Button from "@/lib/ui/components/base/Button";
 import Checkbox from "@/lib/ui/components/base/Checkbox";
 import Input from "@/lib/ui/components/base/Input";
 import NextImage from "@/lib/ui/components/common/nextImage";
-import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 
 const LoginPage: React.FC = () => {
-  const { status } = useSession();
+  // eslint-disable-next-line
   const { handleSubmit, register } = useForm<
     FieldValues,
     string,
@@ -18,40 +17,12 @@ const LoginPage: React.FC = () => {
   >();
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const isAuthenticated: boolean = status === "authenticated"; // eslint-disable-line
-  const router = useRouter();
+  const router = useRouter(); // eslint-disable-line
 
-  const submitHandler = handleSubmit(({ email, password }): void => {
-    void (async () => {
-      try {
-        if (isChecked) {
-          await signIn("credentials", {
-            email,
-            password,
-            callbackUrl: "http://localhost:3000/dashboard/",
-          });
-        } else {
-          // eslint-disable-next-line no-alert
-          alert("Handle me"); // TODO: Add real handler for this
-        }
-      } catch (error) {
-        console.error("Error logging in!", error);
-        router.push("/login/");
-      }
-    })();
-  });
+  const submitHandler = () => console.log("test"); // eslint-disable-line
 
-  const oAuthHandler = (provider: string): void => {
-    void (async () => {
-      try {
-        await signIn(provider, {
-          callbackUrl: "http://localhost:3000/dashboard/",
-        });
-      } catch (error) {
-        console.error("Error signing in!", error);
-        router.push("/login/");
-      }
-    })();
-  };
+  const oAuthHandler = (str: string) => console.log("test"); // eslint-disable-line
+
   const checkboxHandler = (): void => {
     setIsChecked(!isChecked);
   };
